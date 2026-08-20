@@ -81,7 +81,7 @@ export class Brush extends Mesh {
 		}
 
 		// generate bounds tree
-		geometry.boundsTree = new MeshBVH( geometry, { maxLeafSize: 3, indirect: true, useSharedArrayBuffer } );
+		geometry.boundsTree = new MeshBVH( geometry, { targetLeafSize: 3, indirect: true, useSharedArrayBuffer } );
 
 		// generate half edges
 		if ( ! geometry.halfEdges ) {
